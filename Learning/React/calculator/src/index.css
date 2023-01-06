@@ -8,48 +8,55 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.screen {
-  background: white;
-  height: 40px;
-  width: 118px;
-  border: 1px solid orange;
-  font-size: medium;
-  font-weight: bold;
-  text-align: center;
-  color: orange;
-}
-
 .keyboard {
-  height: 50%;
-  width: 50%;
-}
-
-.number-key {
-  background: white;
-  border: 1px solid orange;
-  float: left;
-  font-size: medium;
-  font-weight: bold;
-  color: orange;
-  height: 40px;
-  width: 30px;
-}
-
-.operation-key {
-  background: white;
-  border: 1px solid orange;
-  float: left;
-  font-size: medium;
-  font-weight: bold;
-  color: orange;
-  height: 40px;
-  width: 30px;
-}
-
-.keyboard-row {
-  display: table;
+  display: flex;
+  flex-direction: row;
   height: fit-content;
   width: fit-content;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+}
+
+.operation-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.number-pad {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-screen {
+  background: white;
+  border: 1px solid orange;
+  float: left;
+  font-size: medium;
+  font-weight: bold;
+  color: orange;
+  text-align: center;
+  height: 30px;
+  width: 118px;
+}
+
+.button-key {
+  background: white;
+  border: 1px solid orange;
+  float: left;
+  font-size: medium;
+  font-weight: bold;
+  line-height: middle;
+  color: orange;
+  height: 40px;
+  width: 30px;
+}
+
+.keyboard-row:after {
+  clear: both;
+  display: table;
 }
 
 code {
